@@ -1,7 +1,7 @@
-Library Name 
+Easify.Excel 
 ============
 
-Brief description of the component or library.
+The project contains a series of components which gives the user the ability to load and save Excel files (2007 and newer) and access or change rows and cells. It also provides a fluent mapping interface similar to the concepts for Automapper or CsvHelper to map the Excel files to entities.
 
 ## Get Started
 
@@ -9,7 +9,32 @@ Description of how to start working with library
 
 ### How to use
 
-The usage of the library or link to the relevant wiki page need to be here.
+Add the extension package to your project(s)
+
+```
+Install-Package ICG.Core.Excel.Extensions
+``` 
+
+or 
+
+```
+dotnet add package ICG.Core.Excel.Extensions
+```
+
+Then you can add the following code to your startup to enable excel support in **ServiceCollection**
+
+```c#
+services.AddExcel();
+```
+
+it adds the following services to your application
+
+```c#
+serviceCollection.AddTransient<IExcelMapperBuilder, ExcelMapperBuilder>(); // Used for excel schema mapping
+serviceCollection.AddTransient<IWorkbookLoader, WorkbookLoader>(); // Used for direct excel manipulation. Needed by previous service
+```
+
+> **Important Notes**: We are using WINDOWS specific drawing library System.Drawing.Common which is a port for GDI+ on Windows, this solution may not be the best, possibly look for alternatives.
 
 ### How to Engage, Contribute, and Give Feedback
 
@@ -27,4 +52,10 @@ Security issues and bugs should be reported by creating the relevant features an
 
 ## Related projects
 
-Include related projects 
+- [Easify](https://github.com/icgam/Easify)
+- [Easify.Ef](https://github.com/icgam/Easify.Ef)
+- [Easify.Templates](https://github.com/icgam/Easify.Templates)
+- [CloseXml](https://github.com/closedxml)
+
+
+
