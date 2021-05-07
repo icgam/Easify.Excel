@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>Mohammad Moattar, Justin French, Aurimas Gecas</Authors>
+        <Company>ICG</Company>
+        <Description>Easify.Excel implementation based on ClosedXML API.</Description>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="ClosedXML" Version="0.94.2" />
+        <PackageReference Include="DocumentFormat.OpenXml" Version="2.12.3" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.0.1" />
+        <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Easify.Excel\Easify.Excel.csproj" />
+    </ItemGroup>
+</Project>
