@@ -16,7 +16,6 @@
 // 
 
 
-using System;
 using System.Diagnostics;
 using System.Linq;
 using Easify.Excel.ClosedXml.IntegrationTests.Helpers;
@@ -29,7 +28,7 @@ using Xunit.Abstractions;
 
 namespace Easify.Excel.ClosedXml.IntegrationTests
 {
-    public class ExcelMapperPerformanceDataTests : IClassFixture<DatafileFixture>, IDisposable
+    public class ExcelMapperPerformanceDataTests : IClassFixture<DatafileFixture>
     {
         public ExcelMapperPerformanceDataTests(DatafileFixture fixture, ITestOutputHelper output)
         {
@@ -42,12 +41,6 @@ namespace Easify.Excel.ClosedXml.IntegrationTests
             _fixture = fixture;
             _output = output;
             _sut = factory.Build(_fixture.GetWorkbook(Workbook));
-        }
-
-        public void Dispose()
-        {
-            _sut = null;
-            _fixture.Dispose();
         }
 
         private readonly DatafileFixture _fixture;

@@ -16,7 +16,7 @@
 // 
 
 
-﻿using System;
+ using System;
 using System.Linq;
 using Easify.Excel.ClosedXml.IntegrationTests.Helpers;
 using Easify.Excel.ClosedXml.IntegrationTests.Models;
@@ -29,7 +29,7 @@ using Xunit;
 
 namespace Easify.Excel.ClosedXml.IntegrationTests
 {
-    public class ExcelMapperDataTests : IClassFixture<DatafileFixture>, IDisposable
+    public class ExcelMapperDataTests : IClassFixture<DatafileFixture>
     {
         public ExcelMapperDataTests(DatafileFixture fixture)
         {
@@ -41,12 +41,6 @@ namespace Easify.Excel.ClosedXml.IntegrationTests
             var factory = new ExcelMapperBuilder(fakeWorkbookLoader, fakeLoggerFactory);
             _fixture = fixture;
             _sut = factory.Build(_fixture.GetWorkbook(Workbook));
-        }
-
-        public void Dispose()
-        {
-            _sut = null;
-            _fixture.Dispose();
         }
 
         private readonly DatafileFixture _fixture;

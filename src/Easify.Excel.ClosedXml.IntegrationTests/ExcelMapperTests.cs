@@ -16,7 +16,7 @@
 // 
 
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -35,7 +35,7 @@ using Xunit;
 
 namespace Easify.Excel.ClosedXml.IntegrationTests
 {
-    public class ExcelMapperTests : IClassFixture<DatafileFixture>, IDisposable
+    public class ExcelMapperTests : IClassFixture<DatafileFixture>
     {
         public ExcelMapperTests(DatafileFixture fixture)
         {
@@ -56,16 +56,6 @@ namespace Easify.Excel.ClosedXml.IntegrationTests
                 .Returns(GetMappingsWithMetadata());
             _modelBuilder.Build<Person>().Returns(new Person());
             _modelBuilder.Build<PersonWithMetadata>().Returns(CreateModel(), CreateModel());
-        }
-
-        public void Dispose()
-        {
-            _propertyMapFactory = null;
-            _typeConverter = null;
-            _modelBuilder = null;
-            _propertyInfoExtractor = null;
-            _sut = null;
-            _fixture.Dispose();
         }
 
         private const string Workbook = "SampleData.xlsx";

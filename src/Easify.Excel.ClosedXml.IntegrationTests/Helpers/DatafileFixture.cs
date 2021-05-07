@@ -23,24 +23,16 @@ using Easify.Extensions;
 
 namespace Easify.Excel.ClosedXml.IntegrationTests.Helpers
 {
-    public class DatafileFixture : IDisposable
+    public class DatafileFixture
     {
         private static readonly object SyncLock = new object();
-        private IWorkbook _workbook;
-
-        public void Dispose()
-        {
-            _workbook.Dispose();
-        }
 
         public IWorkbook GetWorkbook(string dataFile)
         {
             lock (SyncLock)
             {
-                if (_workbook.Empty()) _workbook = LoadWorkbook(dataFile);
+                return LoadWorkbook(dataFile);
             }
-
-            return _workbook;
         }
 
         private IWorkbook LoadWorkbook(string dataFile)
