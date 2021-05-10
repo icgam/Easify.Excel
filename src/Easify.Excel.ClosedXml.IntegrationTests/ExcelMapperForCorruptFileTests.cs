@@ -17,6 +17,7 @@
 
 
 using System;
+using System.IO;
 using Easify.Excel.Exceptions;
 using Easify.Testing;
 using Xunit;
@@ -32,7 +33,7 @@ namespace Easify.Excel.ClosedXml.IntegrationTests
         public void ShouldThrowIfWorkbookIsCorrupted(WorkbookLoader sut)
         {
             // Arrange
-            var datafilePath = $"{AppDomain.CurrentDomain.BaseDirectory}\\data\\{Workbook}";
+            var datafilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", Workbook);
 
             // Act
             // Assert
