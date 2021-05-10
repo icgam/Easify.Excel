@@ -37,7 +37,7 @@ namespace Easify.Excel.ClosedXml.IntegrationTests.Helpers
 
         private IWorkbook LoadWorkbook(string dataFile)
         {
-            var datafilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data", dataFile);
+            var datafilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", dataFile);
             var workbook = new XLWorkbook(GetMemoryStream(datafilePath), XLEventTracking.Disabled);
             var fileName = Path.GetFileName(datafilePath);
             return new Workbook(workbook, fileName);
