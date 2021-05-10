@@ -5,6 +5,7 @@
         <Authors>Mohammad Moattar, Justin French, Aurimas Gecas</Authors>
         <Company>ICG</Company>
         <Description>Easify.Excel implementation based on ClosedXML API.</Description>
+        <RepositoryUrl>https://github.com/icgam/Easify.Excel</RepositoryUrl>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="ClosedXML" Version="0.95.4" />
