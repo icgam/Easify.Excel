@@ -16,20 +16,22 @@
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\Easify.Excel.ClosedXml\Easify.Excel.ClosedXml.csproj" />
-        <ProjectReference Include="..\Easify.Excel.Tests.Common\Easify.Excel.Tests.Common.csproj" />
-    </ItemGroup>
-    <ItemGroup>
-        <None Update="Data\DataSheet_Person_1000_rows.xlsx">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </None>
-        <None Update="Data\SampleData.xlsx">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </None>
-        <None Update="Data\SampleDataCorruptFile.xlsx">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </None>
     </ItemGroup>
     <ItemGroup>
         <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Remove="Data\DataSheet_Person_1000_rows.xlsx" />
+      <Content Include="Data\DataSheet_Person_1000_rows.xlsx">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\SampleData.xlsx" />
+      <Content Include="Data\SampleData.xlsx">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Data\SampleDataCorruptFile.xlsx" />
+      <Content Include="Data\SampleDataCorruptFile.xlsx">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 </Project>
