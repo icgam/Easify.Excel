@@ -12,13 +12,13 @@ Description of how to start working with library
 Add the extension package to your project(s)
 
 ```
-Install-Package ICG.Core.Excel.Extensions
+Install-Package Easify.Excel.Extensions
 ``` 
 
 or 
 
 ```
-dotnet add package ICG.Core.Excel.Extensions
+dotnet add package Easify.Excel.Extensions
 ```
 
 Then you can add the following code to your startup to enable excel support in **ServiceCollection**
