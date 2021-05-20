@@ -27,7 +27,7 @@ namespace Easify.Excel.Exceptions
         private static string GetMessage(string sheetName, string workbookTitle)
         {
             return
-                $"No mappings where created for '{typeof(TModel).FullName}' using worksheet '{sheetName}' loaded from '{workbookTitle}'! At least one valid mapping should exist!";
+                $"No mappings were created for '{typeof(TModel).FullName}' using worksheet '{sheetName}' loaded from '{workbookTitle}'! At least one valid mapping should exist!";
         }
     }
 }

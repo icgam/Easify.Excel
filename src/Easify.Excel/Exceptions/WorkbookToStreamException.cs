@@ -21,7 +21,7 @@ namespace Easify.Excel.Exceptions
 {
     public class WorkbookToStreamException : ExcelException
     {
-        public WorkbookToStreamException(Exception inner) : base("Error is converting workbook to memory stream", inner)
+        public WorkbookToStreamException(Exception inner) : base("Error in converting workbook to memory stream", inner)
         {
         }
     }

@@ -31,8 +31,7 @@ namespace Easify.Excel.Mapper.Metadata
 
         protected ModelMetadata(IPropertyInfoExtractor propertyInfoExtractor)
         {
-            if (propertyInfoExtractor == null) throw new ArgumentNullException(nameof(propertyInfoExtractor));
-            _propertyInfoExtractor = propertyInfoExtractor;
+            _propertyInfoExtractor = propertyInfoExtractor ?? throw new ArgumentNullException(nameof(propertyInfoExtractor));
             _metadataDictionary = new Dictionary<string, CellMetadata>();
         }
 
