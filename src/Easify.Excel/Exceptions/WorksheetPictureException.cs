@@ -15,7 +15,6 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // 
 
-
 namespace Easify.Excel.Exceptions
 {
     public class WorksheetPictureException : ExcelException

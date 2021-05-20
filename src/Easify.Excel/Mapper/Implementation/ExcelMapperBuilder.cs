@@ -18,7 +18,7 @@
 using System;
 using System.Collections.Generic;
 using Easify.Excel.Mapper.PropertyMap;
-using Easify.Excel.Mapper.PropertyMap.Convetions;
+using Easify.Excel.Mapper.PropertyMap.Conventions;
 using Easify.Excel.Reflection;
 using Easify.Extensions;
 using Microsoft.Extensions.Logging;

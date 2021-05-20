@@ -15,7 +15,6 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // 
 
-
 using System;
 using Easify.Excel.Mapper.Metadata;
 using Easify.Excel.Reflection;

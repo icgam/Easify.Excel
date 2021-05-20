@@ -15,7 +15,6 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // 
 
-
 using System.Linq;
 using Easify.Excel.Mapper.PropertyMap;
 using Easify.Excel.UnitTests.Models;

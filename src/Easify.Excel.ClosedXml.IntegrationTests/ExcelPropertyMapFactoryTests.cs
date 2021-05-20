@@ -15,7 +15,6 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // 
 
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +22,7 @@ using Easify.Excel.ClosedXml.IntegrationTests.Helpers;
 using Easify.Excel.ClosedXml.IntegrationTests.Models;
 using Easify.Excel.Mapper;
 using Easify.Excel.Mapper.PropertyMap;
-using Easify.Excel.Mapper.PropertyMap.Convetions;
+using Easify.Excel.Mapper.PropertyMap.Conventions;
 using Easify.Excel.Mapper.PropertyMap.Exceptions;
 using Easify.Excel.Reflection;
 using Microsoft.Extensions.Logging;

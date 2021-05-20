@@ -15,8 +15,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // 
 
-
-using Easify.Excel.Mapper.PropertyMap.Convetions;
+using Easify.Excel.Mapper.PropertyMap.Conventions;
 using Xunit;
 
 namespace Easify.Excel.UnitTests

@@ -22,7 +22,7 @@ using System.Linq;
 using Easify.Extensions;
 using Microsoft.Extensions.Logging;
 
-namespace Easify.Excel.Mapper.PropertyMap.Convetions
+namespace Easify.Excel.Mapper.PropertyMap.Conventions
 {
     public class PropertyNamingConventionsBucket : IPropertyNameConvention
     {
