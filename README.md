@@ -32,6 +32,50 @@ it adds the following services to your application
 ```c#
 serviceCollection.AddTransient<IExcelMapperBuilder, ExcelMapperBuilder>(); // Used for excel schema mapping
 serviceCollection.AddTransient<IWorkbookLoader, WorkbookLoader>(); // Used for direct excel manipulation. Needed by previous service
+
+```
+
+Now you cane work with IWorkbookLoader to load the excel file from file or stream
+
+```c#
+
+var workbookLoader = serviceProvider.GetRequiredService<IWorkbookLoader>();
+var workbook = workbook.Load("filename");
+
+// Manipulate the file
+
+workbook.Save("Another file");
+
+```
+
+Or you can `ExcelMapperBuilder` to map and load the excel into an entity
+
+```c#
+
+public sealed class PersonModel
+{
+    public string Name { get; set; }
+    public string PersonName { get; set; }
+    public string PersonNameContainsSpecialCharacter { get; set; }
+    public decimal? AmountInCurrency { get; set; }
+    public string Currency { get; set; }
+    public decimal? Salary { get; set; }
+    public DateTime? BirthDate { get; set; }
+    public string CountryName { get; set; }
+    public bool? Certified { get; set; }
+    public int? CertificationId { get; set; }
+    public int? CustomRowNumber { get; set; }
+}
+
+// ...
+
+var builder = serviceProvider.GetService<IExcelMapperBuilder>();
+var workbook = workbook.Load("filename");
+var mapper = builder.Build(workbook);
+
+var personList = mapper.Map<PersonModel>("Sheet1", opt =>
+                opt.ForMember(m => m.CustomRowNumber, Resolve.ByValue("Custom Identification No"))).ToList()
+                
 ```
 
 > **Important Notes**: We are using WINDOWS specific drawing library System.Drawing.Common which is a port for GDI+ on Windows, this solution may not be the best, possibly look for alternatives.

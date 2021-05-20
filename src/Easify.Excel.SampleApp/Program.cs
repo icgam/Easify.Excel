@@ -38,8 +38,8 @@ namespace Easify.Excel.SampleApp
             ConfigureServices(serviceCollection);
             serviceCollection.AddExcel();
             var serviceProvider = serviceCollection.BuildServiceProvider();
-            var excelFactory = serviceProvider.GetService<IExcelMapperBuilder>();
-            var mapper = excelFactory.Build(LoadWorkbook(Workbook));
+            var builder = serviceProvider.GetService<IExcelMapperBuilder>();
+            var mapper = builder.Build(LoadWorkbook(Workbook));
 
             Console.WriteLine("Press any key when ready to load some EXCEL data:)");
             Console.ReadLine();
