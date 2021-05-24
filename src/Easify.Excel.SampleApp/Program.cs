@@ -51,12 +51,10 @@ namespace Easify.Excel.SampleApp
             sw.Start();
 
             var result = mapper.Map<PersonModel>("Sheet1", opt =>
-                opt
-                    .ForMember(m => m.CustomRowNumber, Resolve.ByValue("Custom Identification No"))).ToList();
+                opt.ForMember(m => m.CustomRowNumber, Resolve.ByValue("Custom Identification No"))).ToList();
 
             sw.Stop();
-            Console.WriteLine(
-                $"{result.Count} records loaded from {Workbook} in {sw.ElapsedMilliseconds} milliseconds.");
+            Console.WriteLine($"{result.Count} records loaded from {Workbook} in {sw.ElapsedMilliseconds} milliseconds.");
             Console.WriteLine("Press any key to exit.");
             Console.ReadLine();
         }
