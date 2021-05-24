@@ -1,6 +1,8 @@
 Easify.Excel 
 ============
 
+![Release](https://github.com/icgam/Easify.Excel/workflows/Release%20build%20on%20master/main/badge.svg) ![CI](https://github.com/icgam/Easify.Excel/workflows/CI%20on%20Branches%20and%20PRs/badge.svg) ![](https://img.shields.io/nuget/v/Easify.Excel.svg?style=flat-square)
+
 The project contains a series of components which gives the user the ability to load and save Excel files (2007 and newer) and access or change rows and cells. It also provides a fluent mapping interface similar to the concepts for Automapper or CsvHelper to map the Excel files to entities.
 
 ## Get Started
