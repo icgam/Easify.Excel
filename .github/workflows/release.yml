@@ -41,4 +41,4 @@ jobs:
           name: nuget-packages
           path: "**/*.nupkg"
       - name: Publish the package to NuGet.Org
-        run: dotnet nuget push "**/*.nupkg" -s -s https://api.nuget.org/v3/index.json -k ${{ secrets.PUBLISH_NUGET_ORG }} --skip-duplicate
+        run: dotnet nuget push "**/*.nupkg" -s https://api.nuget.org/v3/index.json -k ${{ secrets.PUBLISH_NUGET_ORG }} --skip-duplicate
