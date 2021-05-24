@@ -62,7 +62,6 @@ namespace Easify.Excel.ClosedXml.Extensions
         public static DateTime? GetDateTimeOrDefault(this IXLCell cell)
         {
             var rawValue = cell.GetStringOrDefault();
-
             if (string.IsNullOrEmpty(rawValue))
                 return null;
 
