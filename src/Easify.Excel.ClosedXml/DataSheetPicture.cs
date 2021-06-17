@@ -58,8 +58,32 @@ namespace Easify.Excel.ClosedXml
 
         public IDataSheetPicture WithSize(int width, int height)
         {
+            if (width <= 0) throw new ArgumentOutOfRangeException(nameof(width));
+            if (height <= 0) throw new ArgumentOutOfRangeException(nameof(height));
+            
             _picture.WithSize(width, height);
             return this;
         }
+        
+        public IDataSheetPicture WithWidth(int width)
+        {
+            if (width <= 0) throw new ArgumentOutOfRangeException(nameof(width));
+            
+            var height = width/(decimal)_picture.Width * _picture.Height;
+            _picture.WithSize(width, (int)height);
+            return this;
+        }        
+        
+        public IDataSheetPicture WithHeight(int height)
+        {
+            if (height <= 0) throw new ArgumentOutOfRangeException(nameof(height));
+            
+            var width = (height/(decimal)_picture.Height) * _picture.Width;
+            _picture.WithSize((int)width, height);
+            return this;
+        }
+
+        public int Width => _picture.Width;
+        public int Height => _picture.Height;
     }
 }
