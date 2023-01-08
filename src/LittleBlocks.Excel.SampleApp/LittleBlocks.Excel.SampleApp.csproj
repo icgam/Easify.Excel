@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.14" />
+  </ItemGroup>
+  <ItemGroup>
+      <ProjectReference Include="..\LittleBlocks.Excel.ClosedXml\LittleBlocks.Excel.ClosedXml.csproj" />
+      <ProjectReference Include="..\LittleBlocks.Excel.Extensions\LittleBlocks.Excel.Extensions.csproj" />
+      <ProjectReference Include="..\LittleBlocks.Excel\LittleBlocks.Excel.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Data\DataSheet_Person_1000_rows.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

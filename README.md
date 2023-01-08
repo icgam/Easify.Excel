@@ -1,7 +1,7 @@
-Easify.Excel 
+LittleBlocks.Excel 
 ============
 
-![Release](https://github.com/icgam/Easify.Excel/workflows/Release%20build%20on%20master/main/badge.svg) ![CI](https://github.com/icgam/Easify.Excel/workflows/CI%20on%20Branches%20and%20PRs/badge.svg) ![](https://img.shields.io/nuget/v/Easify.Excel.svg?style=flat-square)
+![Release](https://github.com/LittleBlocks/LittleBlocks.Excel/workflows/Release%20build%20on%20master/main/badge.svg) ![CI](https://github.com/LittleBlocks/LittleBlocks.Excel/workflows/CI%20on%20Branches%20and%20PRs/badge.svg) ![](https://img.shields.io/nuget/v/LittleBlocks.Excel.svg?style=flat-square)
 
 The project contains a series of components which gives the user the ability to load and save Excel files (2007 and newer) and access or change rows and cells. It also provides a fluent mapping interface similar to the concepts for Automapper or CsvHelper to map the Excel files to entities.
 
@@ -14,13 +14,13 @@ Description of how to start working with library
 Add the extension package to your project(s)
 
 ```
-Install-Package Easify.Excel.Extensions
+Install-Package LittleBlocks.Excel.Extensions
 ``` 
 
 or 
 
 ```
-dotnet add package Easify.Excel.Extensions
+dotnet add package LittleBlocks.Excel.Extensions
 ```
 
 Then you can add the following code to your startup to enable excel support in **ServiceCollection**
@@ -98,9 +98,9 @@ Security issues and bugs should be reported by creating the relevant features an
 
 ## Related projects
 
-- [Easify](https://github.com/icgam/Easify)
-- [Easify.Ef](https://github.com/icgam/Easify.Ef)
-- [Easify.Templates](https://github.com/icgam/Easify.Templates)
+- [LittleBlocks](https://github.com/LittleBlocks/LittleBlocks)
+- [LittleBlocks.Ef](https://github.com/LittleBlocks/LittleBlocks.Ef)
+- [LittleBlocks.Templates](https://github.com/LittleBlocks/LittleBlocks.Templates)
 - [CloseXml](https://github.com/closedxml)
 
 

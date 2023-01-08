@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>Mohammad Moattar, Justin French, Aurimas Gecas</Authors>
+        <Company>ICG</Company>
+        <Description>LittleBlocks.Excel implementation based on ClosedXML API.</Description>
+        <RepositoryUrl>https://github.com/LittleBlocks/LittleBlocks.Excel</RepositoryUrl>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="ClosedXML" Version="0.97.0" />
+        <PackageReference Include="DocumentFormat.OpenXml" Version="2.19.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.3" />
+        <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\LittleBlocks.Excel\LittleBlocks.Excel.csproj" />
+    </ItemGroup>
+</Project>
