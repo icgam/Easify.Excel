@@ -47,5 +47,12 @@ namespace LittleBlocks.Excel.ClosedXml
         {
             return new DataSheetRow(_range.Row(row));
         }
+        
+        public void Merge()
+        {
+            var xlRange = _range.Merge();
+            xlRange.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Left;
+            xlRange.Style.Alignment.Vertical = XLAlignmentVerticalValues.Top;
+        }
     }
 }

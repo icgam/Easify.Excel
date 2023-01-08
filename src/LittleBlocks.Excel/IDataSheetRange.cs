@@ -26,5 +26,6 @@ namespace LittleBlocks.Excel
 
         IDataSheetCell Cell(int row, int column);
         IDataSheetRow Row(int row);
+        void Merge();
     }
 }

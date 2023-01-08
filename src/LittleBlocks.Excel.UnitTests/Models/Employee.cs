@@ -17,7 +17,7 @@
 
 namespace LittleBlocks.Excel.UnitTests.Models
 {
-    public class Employee : Person
+    public sealed class Employee : Person
     {
         public decimal Salary { get; set; }
         private string Secret { get; set; }

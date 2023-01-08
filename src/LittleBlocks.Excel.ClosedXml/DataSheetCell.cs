@@ -37,6 +37,8 @@ namespace LittleBlocks.Excel.ClosedXml
             return _cell.GetValue<TValue>();
         }
 
+        public object OriginalCell => Internal;
+
         public string GetString()
         {
             return _cell.GetString();
