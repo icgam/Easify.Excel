@@ -32,6 +32,8 @@ namespace LittleBlocks.Excel.ClosedXml
             _worksheet = worksheet ?? throw new ArgumentNullException(nameof(worksheet));
         }
 
+        public IXLWorksheet Internal => _worksheet;
+
         public IDataSheetRow FirstRowUsed()
         {
             return new DataSheetRow(_worksheet.FirstRowUsed());
