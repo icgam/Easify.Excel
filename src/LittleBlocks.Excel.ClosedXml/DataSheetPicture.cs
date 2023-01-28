@@ -16,6 +16,7 @@
 // 
 
 using System;
+using System.Drawing; // this is refactored out in the latest version of closed xml. Big changes to make it work.
 using ClosedXML.Excel.Drawings;
 
 namespace LittleBlocks.Excel.ClosedXml
@@ -45,6 +46,14 @@ namespace LittleBlocks.Excel.ClosedXml
             if (column <= 0) throw new ArgumentOutOfRangeException(nameof(column));
 
             _picture.MoveTo(row, column);
+            return this;
+        }
+        
+        public IDataSheetPicture MoveTo(IDataSheetCell cell, Point offset)
+        {
+            if (cell == null) throw new ArgumentNullException(nameof(cell));
+            var internalCell = ((DataSheetCell)cell).Internal;
+            _picture.MoveTo(internalCell, offset);
             return this;
         }
 
