@@ -1,0 +1,31 @@
+name: CI on Branches and PRs - Easify.Excel
+
+on:
+  workflow_dispatch:
+    branches-ignore: [master]
+    paths: "src/**"
+
+  pull_request:
+    branches: [master]
+    paths: "src/**"
+
+jobs:
+  build:
+    uses: icgam/DevOps.Templates/.github/workflows/build-and-publish-dotnet-library.yml@feature/DEV-5743-CiCdTemplatesTasksUpdate
+    with:
+      project_name: 'Easify.Excel'
+      solution_path: 'src'
+      dotnet_version: '3.1.x'
+      gitversion_spec: '5.5.x'
+      build_configuration: 'Release'
+      timeout_minutes: 20
+      runner: 'ubuntu-latest'
+      fetch_git_history: true
+      run_tests: true
+      create_nuget_package: true
+      publish_to_nuget: false
+      upload_artifacts: true
+      artifacts_name: 'nuget-packages'
+      artifacts_path: '**/*.nupkg'
+    secrets:
+      nuget_api_key: ${{ secrets.GITHUB_TOKEN }} 
