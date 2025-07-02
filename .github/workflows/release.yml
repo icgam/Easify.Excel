@@ -1,11 +1,9 @@
 name: Release build on master/main
 
 on:
-  workflow_dispatch:
-
-  # push:
-  #   branches: [ master ]
-  #   paths: "src/**"
+  push:
+    branches: [ master ]
+    paths: "src/**"
 
 jobs:
   build:

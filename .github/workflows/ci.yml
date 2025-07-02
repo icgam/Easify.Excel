@@ -5,13 +5,13 @@ on:
     branches-ignore: [ master ]
     paths: "src/**"
 
-  # push:
-  #   branches-ignore: [ master ]
-  #   paths: "src/**"
+  push:
+    branches-ignore: [ master ]
+    paths: "src/**"
 
-  # pull_request:
-  #   branches: [ master ]
-  #   paths: "src/**"
+  pull_request:
+    branches: [ master ]
+    paths: "src/**"
 
 jobs:
   build:
