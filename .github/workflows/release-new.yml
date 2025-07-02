@@ -1,0 +1,33 @@
+name: Build & Release - Easify.Excel
+
+on:
+  workflow_dispatch:
+    branches: [master]
+    paths: "src/**"
+
+  # push:
+  #   branches: [master]
+  #   paths: "src/**"
+
+jobs:
+  build:
+    uses: icgam/DevOps.Templates/.github/workflows/build-and-publish-dotnet-library.yml@feature/DEV-5743-CiCdTemplatesTasksUpdate
+    with:
+      project_name: 'Easify.Excel'
+      solution_path: 'src'
+      dotnet_version: '3.1.x'
+      gitversion_spec: '5.5.x'
+      build_configuration: 'Release'
+      timeout_minutes: 20
+      runner: 'ubuntu-latest'
+      fetch_git_history: true
+      run_tests: true
+      create_nuget_package: true
+      publish_to_nuget: true
+      upload_artifacts: true
+      artifacts_name: 'nuget-packages'
+      artifacts_path: '**/*.nupkg'
+      nuget_source: 'https://api.nuget.org/v3/index.json'
+      skip_duplicate: true
+    secrets:
+      nuget_api_key: ${{ secrets.PUBLISH_NUGET_ORG }} 
